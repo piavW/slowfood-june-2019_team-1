@@ -16,3 +16,4 @@ Cartify.title_attribute = :name
 # the price of the product
 Cartify.price_attribute = :price 
 
+
