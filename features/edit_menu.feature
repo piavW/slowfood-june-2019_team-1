@@ -1,7 +1,7 @@
-Feature: Visitor can view menu
-  As a visitor 
-  In order to get an overview of the restaurant's products 
-  I would like to be able to see a menu
+Feature: Restaurant owner can update his menu
+  As a restaurant owner,
+  In order to keep my customers up to date regarding my products
+  I would like to be able to make updates to my menu
   
   Background: 
     Given the following categories exists
@@ -17,13 +17,8 @@ Feature: Visitor can view menu
       | calzone       | cheese, tomato sauce, ham       | 80    | Main Courses    |
       | ice-cream     | strawberry                      | 40    | Desserts        |
       | ice-cream     | vanilla                         | 40    | Desserts        |
+    And I visit the landing page
   
-  Scenario: Be able to see menu[Happy Path]
-    Given I visit the landing page 
-    Then I should see 'Menu'
-    And I should see "margherita"
-    And I should see "cheese, tomato sauce, basil"
-    And I should see "70.0"
-    And I should see "ice-cream"
-    And I should see "vanilla"
-    And I should see "40.0"
+  Scenario: Owner can update products in menu [Happy Path]
+    Given I click on "edit"
+    Then I should be on "edit" page
