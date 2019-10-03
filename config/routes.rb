@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :products, only: [:edit, :destroy] 
+
+  
+  resources :products, except: [:show]
+
   root controller: :products, action: :index
 end
