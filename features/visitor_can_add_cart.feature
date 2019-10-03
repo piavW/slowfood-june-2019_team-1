@@ -1,3 +1,4 @@
+@javascript
 Feature: Visitor can add to order
   As a visitor,
   In order to select products I want to buy
@@ -10,5 +11,6 @@ Background:
   
   Scenario: Visitor can add products to cart
     Given I visit the landing page 
-    And I click on "Add to cart"
+    And I click on "Add to cart" on "garlic bread"
+    Then I should see "1 item"
      

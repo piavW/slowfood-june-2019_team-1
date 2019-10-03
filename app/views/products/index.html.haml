@@ -1,10 +1,13 @@
+%table
+
 %h1 Menu for FoodComrade restaurant
 
 %ul#categorieslist
   - @categories.each do |category|
     %h2= category.title
     - category.products.each do |product|
-      %li
-        = product.name
-        = product.description
-        = product.price
+      .div{id: dom_id(product)}
+        %li
+          = product.name
+          = product.description
+          = product.price

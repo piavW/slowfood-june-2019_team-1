@@ -10,6 +10,13 @@ When("I fill in {string} with {string}") do |field, content|
   fill_in field, with: content
 end
 
+Given("I click on {string} on {string}") do |element, product_name|
+  product = Product.find_by_name(product_name)
+  within("#product_#(product.id)") do
+    click_on element
+  end
+end
+
 Given("the following products exists") do |table|
   table.hashes.each do |product|
     category = Category.find_or_create_by(title: product[:category])
