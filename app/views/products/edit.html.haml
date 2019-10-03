@@ -1,26 +1,25 @@
-%h1 Edit products
-= form_with(model: @product,local: true) do | form |
+= form_with(model: @product, local: true) do |form|
   - if @product.errors.any?
-    #error_explanation 
+    #error_explanation
       %h2
         = pluralize(@product.errors.count, "error")
-          prohibited
-          this product from being saved:
-      %ul 
+        prohibited
+        this product from being saved:
+      %ul
         - @product.errors.full_messages.each do |msg|
-          %li = %msg
+          %li= msg
   %p
     = form.label :name
-    %br
+    %br/
     = form.text_field :name
   %p
     = form.label :description
-    %br
-    = form.text_field :description
+    %br/
+    = form.text_area :description
   %p
     = form.label :price
-    %br
+    %br/
     = form.text_field :price
-  %p 
-    = form.sumbit
- = link_to 'Back', root_path
+  %p
+    = form.submit
+= link_to 'Back', root_path

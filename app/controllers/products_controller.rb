@@ -1,9 +1,10 @@
 class ProductsController < ApplicationController
   before_action :authenticate_admin!, only:[:edit, :update, :destroy] 
+  
   def index
     @categories = Category.all
   end
-  
+
   def edit
     @product = Product.find(params[:id])
   end
