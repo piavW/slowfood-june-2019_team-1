@@ -17,8 +17,17 @@ Feature: Restaurant owner can update his menu
       | calzone       | cheese, tomato sauce, ham       | 80    | Main Courses    |
       | ice-cream     | strawberry                      | 40    | Desserts        |
       | ice-cream     | vanilla                         | 40    | Desserts        |
-    And I visit the landing page
+    And the following user exists
+      | name | email        | password | admin |
+      | John | john@doe.com | password | true  |
+    And I click "Login"
+    And I fill in "Email" with "john@doe.com"
+    And I fill in "Password" with "password"
+    And I click "Log in"
   
   Scenario: Owner can update products in menu [Happy Path]
-    Given I click on "edit"
+    Given I click "Edit"
     Then I should be on "edit" page
+    And I fill in "" with ""
+    When I click "update"
+    Then I should see ""
