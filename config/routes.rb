@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :products, only: [:show]
+  resources :products, only: [:show, :index]
   mount Cartify::Engine, at: '/'
   devise_for :users
   
