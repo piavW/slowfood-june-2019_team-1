@@ -33,3 +33,12 @@ end
 When("I choose {string}") do |element|
   choose Category.find_by(title: element)
 end
+
+Given("I am logged in as {string}") do |name|
+  user = User.find_by(name: name)
+  login_as(user, scope: :user)
+end
+
+Given("I click {string} on garlic bread") do |element|
+  click_on element
+end

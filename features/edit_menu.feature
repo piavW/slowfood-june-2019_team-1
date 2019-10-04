@@ -13,14 +13,11 @@ Feature: Restaurant owner can update his menu
     And the following user exists
       | name | email        | password | admin |
       | John | john@doe.com | password | true  |
+    And I am logged in as "John"
     And I visit the landing page
-    And I click "Login"
-    And I fill in "Email" with "john@doe.com"
-    And I fill in "Password" with "password"
-    And I click "Log in"
   
   Scenario: Owner can update products in menu [Happy Path]
-    When I click "Edit"
+    When I click "Edit" on garlic bread
     And I fill in "Description" with "garlic with bread"
     And I click "Update Product"
     Then I should see "garlic with bread"
