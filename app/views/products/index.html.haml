@@ -1,5 +1,8 @@
 %h1 Menu for FoodComrade restaurant
-= link_to "New", new_product_path()
+
+%div
+  - if current_user.try(:admin?)
+    = link_to "New", new_product_path()
 
 %ul#categorieslist
   - @categories.each do |category|
