@@ -31,5 +31,5 @@ Given("the following user exists") do |table|
 end
 
 When("I choose {string}") do |element|
-  choose Category.find_by(title: element )
+  choose Category.find_by(title: element)
 end
