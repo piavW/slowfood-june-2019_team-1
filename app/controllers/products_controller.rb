@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :authenticate_admin!, only:[:edit, :update, :destroy] 
+  before_action :authenticate_admin!, only:[:edit, :update, :destroy, :create, :new] 
   
   def index
     @categories = Category.all
