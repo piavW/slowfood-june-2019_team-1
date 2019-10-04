@@ -37,5 +37,10 @@ Given("the following user exists") do |table|
   end
 end 
 
+When("I click on {string}") do |link_name|
+ click_on link_name
+end
+
+
 
 

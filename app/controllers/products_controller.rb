@@ -3,4 +3,6 @@ class ProductsController < ApplicationController
     @categories = Category.all
     @products = Product.all
   end
+  def show 
+  end
 end

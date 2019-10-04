@@ -11,9 +11,8 @@ Cartify.empty_cart_path = 'root_path'
 # tell Cartify what attributes to use:
 
 # the name of the product
-Cartify.title_attribute = :name
+Cartify.title_attribute = :title
 
 # the price of the product
 Cartify.price_attribute = :price 
-
 

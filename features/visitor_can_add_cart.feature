@@ -13,4 +13,5 @@ Background:
     Given I visit the landing page 
     And I click on "Add to cart" on "garlic bread"
     Then I should see "1 item"
+    When I click on "Proceed to checkout"
      
