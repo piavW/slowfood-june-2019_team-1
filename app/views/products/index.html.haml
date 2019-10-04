@@ -2,7 +2,7 @@
 
 %div
   - if current_user.try(:admin?)
-    = link_to "New", new_product_path()
+    = link_to "New Product", new_product_path
 
 %ul#categorieslist
   - @categories.each do |category|
