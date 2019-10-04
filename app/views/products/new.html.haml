@@ -23,9 +23,7 @@
   %p
     = form.label :category
     %br/
-    = form.check_box(:starters) 
-    = form.check_box(:mains) 
-    = form.check_box(:desserts) 
+    .Category= form.collection_radio_buttons :category_id, Category.all, :id, :title 
   %p
     = form.submit
 = link_to 'Back', root_path

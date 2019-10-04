@@ -29,3 +29,7 @@ Given("the following user exists") do |table|
     FactoryBot.create(:user, user)
   end
 end
+
+When("I choose {string}") do |element|
+  choose Category.find_by(title: element )
+end
