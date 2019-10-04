@@ -4,18 +4,12 @@
   - @categories.each do |category|
     %h2= category.title
     - category.products.each do |product|
-<<<<<<< HEAD
       .div{id: dom_id(product)}
         %table
           %td= product.name
           %td= product.description
           %td= product.price
           %td= add_to_cart(product, 1, 'Add to cart')
-=======
-      %li
-        = product.name
-        = product.description
-        = product.price
-      - if current_user.try(:admin?)
-        = link_to 'Edit'
->>>>>>> e7894292e8578b70ed1d1bd4f7a22fd0cdd3a412
+        - if current_user.try(:admin?)
+          = link_to 'Edit'
+
