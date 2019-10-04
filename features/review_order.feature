@@ -17,6 +17,15 @@ Background:
     And I click on "Add to cart" on "garlic bread"
     Then I should see "1 item"
     When I click on "Proceed to checkout"
-    And I fill in "Enter Email" with my email "john@doe.com"
+    And I fill in "Enter Email" with "john@doe.com" in first form
     And I fill in "Password" with "password"
     And I click on "Log in with password"
+    And I check "Use Billing Adress"
+    And I fill in "First Name" with "John" in first form
+    And I fill in "Last name" with "Doe" in first form
+    And I fill in "Address" with "Fakelane" in first form
+    And I fill in "City" with "City" in first form
+    And I fill in "Zip" with "000" in first form
+    And I fill in "Phone" with "+1234" in first form
+
+    Then I click on "Save and Continue"
