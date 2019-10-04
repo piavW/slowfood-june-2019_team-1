@@ -4,10 +4,10 @@ Feature: Restaurant owner can update his menu
   I would like to be able to make updates to my menu
   
   Background: 
-    Given the following categories exists
+    Given the following category exists
       | title    |
       | Starters |
-    And the following products exists
+    And the following product exists
       | name          | description           | price | category |
       | garlic bread  | garlic, bread, butter | 30    | Starters |
     And the following user exists
