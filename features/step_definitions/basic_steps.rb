@@ -35,6 +35,7 @@ Given("the following user exists") do |table|
   table.hashes.each do |user|
     FactoryBot.create(:user, user)
   end
+<<<<<<< HEAD
 end 
 
 When("I click on {string}") do |link_name|
@@ -44,3 +45,6 @@ end
 
 
 
+=======
+end
+>>>>>>> e7894292e8578b70ed1d1bd4f7a22fd0cdd3a412
