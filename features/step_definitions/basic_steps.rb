@@ -41,6 +41,13 @@ When("I click on {string}") do |link_name|
  click_on link_name
 end
 
+When("I fill in {string} with my email {string}") do |field, value|
+  form = find_all('.general-form').first
+  within form do
+    fill_in field, with: value
+  end
+end
+
 
 
 
