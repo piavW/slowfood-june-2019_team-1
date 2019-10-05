@@ -27,4 +27,5 @@ Background:
     And I fill in "Zip" with "000" in first address form
     And I fill in "Phone" with "+1234" in first address form
     And I check Use Billing Adress
-    Then I click on "Save and Continue"
+    And I click on "Save and Continue"
+    Then I should see "Shipping Method"
