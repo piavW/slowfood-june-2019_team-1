@@ -55,25 +55,9 @@ When("I fill in {string} with {string} in first address form") do |field, value|
   end
 end
 
-# new_addresses_form
-# page.find_by_id('red').tag_name
-# #('.col-md-5 mb-40')
-
 When("I check Use Billing Adress") do 
-  check (:use_billing)
+  form = page.find_by_id('shipping')
+  within form do
+    page.find_by_id('mfcb').set(true)
+  end
 end
-#('.col-md-5 col-md-offest-1 mb-60')
-# "addresses_form[use_billing]"
-# find_all('general-form-checkbox')
-#find(:css, "#use_billing[value='1']").set(true)
-#'checkbox-icon'
-#find("input[type='checkbox'][value='#{use_billing.id}']").set(true)
-
-
-#  form = find_all('.col-md-5 col-md-offest-1 mb-60').
-# within form do
-#   page.check 'Use Billing Adress'
-
-#('.col-md-5 mb-40')
-
-#('.col-md-5 col-md-offest-1 mb-60')

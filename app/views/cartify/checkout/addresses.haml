@@ -11,7 +11,7 @@
           - bill_errors = @addresses.billing.errors
           = render 'cartify/shared/address', ff: ff, errors: bill_errors
           = f.hidden_field "[billing][order_id]", value: current_order.id
-      .col-md-5.col-md-offset-1.mb-60
+      .col-md-5.col-md-offset-1.mb-60#shipping
         .visible-xs.visible-sm
           %h3.general-subtitle= t('settings.shipping')
           %p.general-info-text 
@@ -23,7 +23,7 @@
         .form-group.checkbox
           %label.checkbox-label
             = f.check_box :use_billing, class: 'checkbox-input', id: 'use_billing', hidden: true
-            %span.checkbox-icon
+            %span.checkbox-icon#mfcb
               %i.fa.fa-check
             %span.checkbox-text= t('settings.use_billing')
     .general-text-align.mb-60
