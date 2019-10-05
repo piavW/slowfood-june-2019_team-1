@@ -48,10 +48,32 @@ When("I fill in {string} with {string} in first form") do |field, value|
   end
 end
 
-When("I check {string}") do |element|
-  form = find_all('.general-form-checkbox')
+When("I fill in {string} with {string} in first address form") do |field, value|
+  form = find_all('.general-form').first
   within form do
-    check element
+    fill_in field, with: value
   end
 end
+#('.col-md-5 mb-40')
+
+When("I check Use Billing Adress") do 
+  form = find_all('.col-md-5 col-md-offest-1 mb-60').
+  within form do
+    page.check 'Use Billing Adress'
+  end
+end
+#('.col-md-5 col-md-offest-1 mb-60')
 # "addresses_form[use_billing]"
+# find_all('general-form-checkbox')
+#find(:css, "#use_billing[value='1']").set(true)
+#'checkbox-icon'
+#find("input[type='checkbox'][value='#{use_billing.id}']").set(true)
+
+
+#  form = find_all('.col-md-5 col-md-offest-1 mb-60').
+# within form do
+#   page.check 'Use Billing Adress'
+
+#('.col-md-5 mb-40')
+
+#('.col-md-5 col-md-offest-1 mb-60')
