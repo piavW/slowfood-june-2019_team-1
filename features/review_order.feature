@@ -29,4 +29,3 @@ Background:
     And I check Use Billing Adress
     And I click on "Save and Continue"
     Then I should see "Shipping Method"
-    And I click on "Save and Continue"
