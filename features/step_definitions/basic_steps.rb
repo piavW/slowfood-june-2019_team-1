@@ -49,18 +49,18 @@ When("I fill in {string} with {string} in first form") do |field, value|
 end
 
 When("I fill in {string} with {string} in first address form") do |field, value|
-  form = find_all('.general-form').first
+  form = page.find_by_id('new_addresses_form').tag_name.first
   within form do
     fill_in field, with: value
   end
 end
-#('.col-md-5 mb-40')
+
+# new_addresses_form
+# page.find_by_id('red').tag_name
+# #('.col-md-5 mb-40')
 
 When("I check Use Billing Adress") do 
-  form = find_all('.col-md-5 col-md-offest-1 mb-60').
-  within form do
-    page.check 'Use Billing Adress'
-  end
+  check (:use_billing)
 end
 #('.col-md-5 col-md-offest-1 mb-60')
 # "addresses_form[use_billing]"
