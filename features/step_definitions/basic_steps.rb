@@ -49,7 +49,7 @@ When("I fill in {string} with {string} in first form") do |field, value|
 end
 
 When("I fill in {string} with {string} in first address form") do |field, value|
-  form = page.find_by_id('new_addresses_form').tag_name.first
+  form = page.find_by_id('billing')
   within form do
     fill_in field, with: value
   end
