@@ -1,11 +1,10 @@
-%nav
-  %ul
-    %li= link_to 'Home', "#"
-    - if user_signed_in?
-      %li= link_to "Hello, #{current_user.name}", "#"
-      %li= link_to 'Logout', main_app.destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }
-    - else 
-      %li.active= link_to 'Login', main_app.new_user_session_path
+%ul#navbar
+  %li= link_to 'Home', "#"
+  - if user_signed_in?
+    %li= link_to "Hello, #{current_user.name}", "#"
+    %li= link_to 'Logout', main_app.destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }
+  - else 
+    %li.active= link_to 'Login', main_app.new_user_session_path
   = checkout_link
   = shop_icon_quantity
 

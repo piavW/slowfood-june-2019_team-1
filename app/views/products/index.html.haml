@@ -1,15 +1,17 @@
-%h1 Menu for FoodComrade restaurant
-
-%ul#categorieslist
-  - @categories.each do |category|
-    %h2= category.title
-    - category.products.each do |product|
-      .div{id: dom_id(product)}
-        %table
-          %td= product.name
-          %td= product.description
-          %td= product.price
-          %td= add_to_cart(product, 1, 'Add to cart')
-        - if current_user.try(:admin?)
-          = link_to 'Edit'
-
+#divSuper
+  %h1 FoodComrade restaurant
+  #divMain
+    %ul#categorieslist
+      - @categories.each do |category|
+        %h2= category.title
+        - category.products.each do |product|
+          .div{id: dom_id(product)}
+            %table
+              %td= product.name
+              %td= product.description
+              %td= product.price
+              %td= add_to_cart(product, 1, 'Add to cart')
+            - if current_user.try(:admin?)
+              = link_to 'Edit'
+%footer
+  %p Created with Rails (2019)
